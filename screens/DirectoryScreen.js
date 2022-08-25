@@ -6,7 +6,7 @@ const DirectoryScreen = (props) => {
     return (
       <ListItem
         onPress={() => {
-          props.setSelected(campsite.id);
+          props.onPress(campsite.id);
         }}
       >
         <Avatar source={campsite.image} rounded />

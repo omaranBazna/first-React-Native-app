@@ -5,13 +5,18 @@ import { View } from "react-native";
 import CampsitesInfoScreen from "./CampsitesInfoScreen";
 const Main = () => {
   const [campsites, setCampsites] = useState(CAMPSITES);
-  const [selectedCampsite, setSelected] = useState(0);
+  const [selectedCampsiteId, setSelectedCampsiteId] = useState(0);
   return (
     <View style={{ flex: 1 }}>
-      <DirectoryScreen campsites={campsites} setSelected={setSelected} />
+      <DirectoryScreen
+        campsites={campsites}
+        onPress={(campsiteId) => {
+          setSelectedCampsiteId(campsiteId);
+        }}
+      />
       <CampsitesInfoScreen
         campsite={
-          campsites.filter((campsite) => campsite.id == selectedCampsite)[0]
+          campsites.filter((campsite) => campsite.id == selectedCampsiteId)[0]
         }
       />
     </View>
