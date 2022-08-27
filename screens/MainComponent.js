@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { CAMPSITES } from "../shared/campsites";
 import DirectoryScreen from "./DirectoryScreen";
 import { View } from "react-native";
 import CampsitesInfoScreen from "./CampsitesInfoScreen";
